@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import postLogin from "../api/post-login.js";
 
 function LoginForm() {
+    const navigate = useNavigate();  // We use the useNavigate hook to navigate to the home page after the user logs in.
     const [credentials, setCredentials] = useState({
         username: "",
         password: "",
@@ -24,6 +26,7 @@ function LoginForm() {
                 credentials.password
             ).then((response) => {
                 window.localStorage.setItem("token", response.token);
+                navigate("/");
             });
         }
     };
