@@ -23,7 +23,7 @@ function LoginForm() {
                 credentials.username,
                 credentials.password
             ).then((response) => {
-                console.log(response);
+                window.localStorage.setItem("token", response.token);
             });
         }
     };
