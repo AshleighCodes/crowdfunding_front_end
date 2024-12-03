@@ -35,6 +35,15 @@
     color: white;
 }
 
+/* Title styling */
+.page-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 34px; /* Adjust the size as needed */
+    color: #333; /* Same color as navbar links */
+    text-align: center;
+    margin: 20px 0; /* Adjust spacing as needed */
+}
+
 /* Responsive design: stack links vertically on small screens */
 @media screen and (max-width: 600px) {
     .navbar {

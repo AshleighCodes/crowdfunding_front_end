@@ -4,6 +4,7 @@ import "./NavBar.css";
 function NavBar() {
     return (
     <div>
+        <h1 className="page-title">Simply ✨Earisistable✨</h1>
         <nav class="navbar">
             <Link to="/">Home</Link>
             <Link to="/login">Log In</Link>
