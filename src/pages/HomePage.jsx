@@ -1,5 +1,6 @@
 import useProjects from "../hooks/use-projects";
 import ProjectCard from "../components/ProjectCard";
+import ProjectForm from "../components/ProjectForm";
 import "../pages/HomePage.css";
 
 function HomePage() {
@@ -9,6 +10,7 @@ function HomePage() {
             {projects.map((projectData, key) => {
                 return <ProjectCard key={key} projectData={projectData} />; 
             })}
+            <ProjectForm />
         </div>
     );
 }
