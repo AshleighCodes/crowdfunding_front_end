@@ -1,0 +1,37 @@
+.project-page {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.project-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-created-at {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.project-status {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.project-pledges {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pledge-item {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 10px;
+}
