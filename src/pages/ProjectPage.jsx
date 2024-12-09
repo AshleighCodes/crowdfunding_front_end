@@ -20,6 +20,7 @@
 //     return (
 //         <div className="project-page">
 //             <h2 className="project-title">{project.title}</h2>
+//             <img src={project.image} alt={project.title} className="project-image" />
 //             <h3 className="project-created-at">Created at: {project.date_created}</h3>
 //             <h3 className="project-status">{`Status: ${project.is_open}`}</h3>
 //             <h3>Pledges:</h3>
@@ -61,21 +62,25 @@ function ProjectPage() {
 
     return (
         <div className="project-page">
-            <h2 className="project-title">{project.title}</h2>
-            <img src={project.image} alt={project.title} className="project-image" />
-            <h3 className="project-created-at">Created at: {project.date_created}</h3>
-            <h3 className="project-status">{`Status: ${project.is_open}`}</h3>
-            <h3>Pledges:</h3>
-            <ul className="project-pledges">
-                {project.pledges.map((pledgeData, key) => {
-                    return (
-                        <li key={key} className="pledge-item">
-                            {pledgeData.amount} from {pledgeData.supporter}
-                        </li>
-                    );
-                })}
-            </ul>
-            <PledgeForm projectId={project.id} />
+            <div className="project-content">
+                <h2 className="project-title">{project.title}</h2>
+                <h3 className="project-created-at">Created at: {project.date_created}</h3>
+                <h3 className="project-status">{`Status: ${project.is_open}`}</h3>
+                <h3>Pledges:</h3>
+                <ul className="project-pledges">
+                    {project.pledges.map((pledgeData, key) => {
+                        return (
+                            <li key={key} className="pledge-item">
+                                {pledgeData.amount} from {pledgeData.supporter}
+                            </li>
+                        );
+                    })}
+                </ul>
+                <PledgeForm projectId={project.id} />
+            </div>
+            <div className="project-image-container">
+                <img src={project.image} alt={project.title} className="project-image" />
+            </div>
         </div>
     );
 }
