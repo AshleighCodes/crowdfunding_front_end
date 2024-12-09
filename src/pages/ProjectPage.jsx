@@ -1,6 +1,7 @@
 // import { useParams } from "react-router-dom";
 // import useProject from "../hooks/use-project";
 // import PledgeForm from "../components/PledgeForm";
+// import './ProjectPage.css';
 
 // function ProjectPage() {
 //     // Here we use a hook that comes for free in react router called `useParams` to get the id from the URL so that we can pass it to our useProject hook.
@@ -17,15 +18,15 @@
 //     }
 
 //     return (
-//         <div>
-//             <h2>{project.title}</h2>
-//             <h3>Created at: {project.date_created}</h3>
-//             <h3>{`Status: ${project.is_open}`}</h3>
+//         <div className="project-page">
+//             <h2 className="project-title">{project.title}</h2>
+//             <h3 className="project-created-at">Created at: {project.date_created}</h3>
+//             <h3 className="project-status">{`Status: ${project.is_open}`}</h3>
 //             <h3>Pledges:</h3>
-//             <ul>
+//             <ul className="project-pledges">
 //                 {project.pledges.map((pledgeData, key) => {
 //                     return (
-//                         <li key={key}>
+//                         <li key={key} className="pledge-item">
 //                             {pledgeData.amount} from {pledgeData.supporter}
 //                         </li>
 //                     );
@@ -36,7 +37,7 @@
 //     );
 // }
 
-// export default ProjectPage
+// export default ProjectPage;
 
 
 import { useParams } from "react-router-dom";
@@ -61,6 +62,7 @@ function ProjectPage() {
     return (
         <div className="project-page">
             <h2 className="project-title">{project.title}</h2>
+            <img src={project.image} alt={project.title} className="project-image" />
             <h3 className="project-created-at">Created at: {project.date_created}</h3>
             <h3 className="project-status">{`Status: ${project.is_open}`}</h3>
             <h3>Pledges:</h3>
