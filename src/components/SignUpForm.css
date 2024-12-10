@@ -1,61 +1,83 @@
-/* SignUpForm.css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .signup-form-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #f5f5f5;
+    padding: 20px;
 }
 
 .signup-form {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .signup-form-title {
     margin-bottom: 20px;
     font-size: 24px;
+    font-weight: 700;
     text-align: center;
+    width: 100%;
 }
 
-.form-group {
+.signup-form-group {
     margin-bottom: 15px;
+    width: 100%;
 }
 
-.form-group label {
+.signup-form-group label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
-.form-group input {
+.signup-form-input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
-.signup-button {
+.signup-form-button {
     width: 100%;
     padding: 10px;
     background-color: #007bff;
-    color: #fff;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
+    color: #fff;
     font-size: 16px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: 10px;
 }
 
-.signup-button:hover {
+.signup-form-button:hover {
     background-color: #0056b3;
 }
 
 @media (max-width: 600px) {
+    .signup-form-container {
+        padding: 10px;
+    }
+
     .signup-form {
         padding: 15px;
     }
@@ -64,12 +86,11 @@
         font-size: 20px;
     }
 
-    .form-group input {
-        padding: 8px;
+    .signup-form-input {
+        font-size: 14px;
     }
 
-    .signup-button {
-        padding: 8px;
+    .signup-form-button {
         font-size: 14px;
     }
 }
