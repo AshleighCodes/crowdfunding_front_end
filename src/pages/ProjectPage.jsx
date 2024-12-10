@@ -21,7 +21,7 @@ function ProjectPage() {
         <div className="project-page">
             <div className="project-content">
                 <h2 className="project-title">{project.title}</h2>
-                <h3 className="project-created-at">Created at: {project.date_created}</h3>
+                <h3 className="project-created-at">Created at: {new Date(project.date_created).toLocaleString()}</h3>
                 <h3 className="project-status">{`Status: ${project.is_open}`}</h3>
                 <h3>Pledges:</h3>
                 <ul className="project-pledges">
